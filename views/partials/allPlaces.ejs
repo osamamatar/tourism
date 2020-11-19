@@ -1,0 +1,28 @@
+<table class="table">
+    <tr>
+        <th>id</th>
+        <th>image</th>
+        <th>name</th>
+        <th> builder</th>
+        <th>location</th>
+        <th>descrption</th>
+        <th>see more</th>
+    </tr>
+    <%place.map(p=>{%>
+      
+    <tr key="<%=p._id%>">
+        <td>1</td>
+        <td id="img"><img  alt="place" width="50px" height="50" src ="<%= p.image%>"  ></td>
+        <td id="nm"><%=p.name%></td>
+        <td id="bld"><%=p.builder%></td>
+        <td id="loc"><%=p.location%></td>
+        <td id="des" ><%=p.descreption.slice(0,30)%> ...</td>
+        <td><a href="/preview/<%=p._id%>" style="color: rgb(255, 255, 255); background: #be4107; padding: 5px; border-radius: 5px;" > view</a></td>
+    </tr>
+     
+    <%})%>
+ 
+</table>
+
+
+

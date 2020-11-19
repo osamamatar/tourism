@@ -1,0 +1,26 @@
+<%- include ('./partials/header')%>
+<%- include ('./partials/cover')%>
+<div id="places" class="top-places">
+    <div class="container">
+        <h2 class="title">Best places in egypt</h2>
+        <div class="row">
+            <%place.map(p=>{%>
+            <div class="column" >
+                <div class="content">
+                    <img src="<%=p.image%>" alt="Mountains" style="width:100%;height: 200px;">
+                    <h3><%=p.name%></h3>
+                    <p><%=p.descreption.slice(0,30)%>...</p>
+                    <small> builded by <%=p.builder%> </small>
+                    <a href="/preview/<%=p._id%>" style="color: black; background: #ecdd0a; padding: 5px;display: block; margin-top: 3px;"  > view</a>
+                </div>
+            </div>
+            <%})%>
+        </div>
+
+
+        <a class="load" href="/gallery">see more ..</a>
+
+       
+    </div>
+</div>
+<%- include ('./partials/footer')%>

@@ -1,0 +1,36 @@
+<div class="con">
+    <form action="/places" method="POST"  encType="multipart/form-data">
+  
+      <label for="name">Name of place</label>
+      <input required type="text" id="name" name="name" placeholder=" name of this place">
+  
+      <label for="builder">builder Name</label>
+      <input required type="text" id="builder" name="builder" placeholder=" name of builder ">
+     
+  
+      <label for="location">location</label>
+      <select required id="location" name="location">
+        <option value="cairo">cairo</option>
+        <option value="fayoum">fayoum</option>
+        <option value="minya">minya</option>
+        <option value="borsaayed">borsaayed</option>
+        <option value="assuit">assuit</option>
+        <option value="sohage">sohage</option>
+        <option value="tanta">tanta</option>
+        <option value="alexandria">alexandria</option>
+        <option value="matroh">matroh</option>
+        <option value="giza">giza</option>
+        <option value="qena">qena</option>
+      </select>
+      <div>
+        <label for="image">image</label>
+        <input required type="file" id="image" name="image" placeholder=" image ">
+      </div>
+      <br/>
+      <label for="descreption">descreption</label>
+      <textarea required id="descreption" name="descreption" placeholder="Write something.." style="height:200px"></textarea>
+ 
+      <input type="submit" value="Submit" >
+ 
+    </form>
+  </div>

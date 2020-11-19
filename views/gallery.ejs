@@ -1,0 +1,14 @@
+<%- include ('./partials/header')%>
+<div style="height: 100px"></div>
+<div class="container">
+    <div class="row">
+        <%place.map(p=>{%>
+        <div class="column">
+            <div class="content-galary">
+              <a href="/preview/<%=p._id%>"> <img src="<%=p.image%>" alt="alt" style="width:100%;height:250px ;" ></a>  
+            </div>
+        </div>
+        <%})%>
+    </div>
+  
+</div>

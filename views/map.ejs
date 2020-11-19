@@ -1,0 +1,22 @@
+<%- include ('./partials/header')%>
+<div style="height: 100px"></div>
+<div class="container">
+  <img src="egypt.png" alt="egypt" usemap="#workmap" />
+</div>
+
+<map name="workmap">
+  <% var x=95
+   var y=0 
+   place.map(p=>{ 
+  
+    %>
+  <area
+    shape="rect"
+    coords="200,<%=y%>,550,<%=x%>"
+    href="/preview/<%=p._id%>"
+    alt="Computer"
+  />
+
+  <% x+=95
+   y+=100 })%>
+</map>
