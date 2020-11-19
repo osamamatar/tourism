@@ -1,2 +1,2 @@
 # tourism
-this simple wepsite applection  with CRUD operations in node js 
+this simple wepsite application  with CRUD operations in node js 
