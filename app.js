@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const place = require('./models/place')
 const methodOverride = require("method-override")
-const port = 3000
+const port =process.env.PORT || 3000 
 const multer = require('multer')
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -16,7 +16,7 @@ const storage = multer.diskStorage({
   }
 })
 //connect to mongo db
-const url = 'mongodb://localhost/tourism'
+const url = 'mongodb+srv://dbUser:<12345>@cluster0.uekuf.mongodb.net/<dbname>?retryWrites=true&w=majority'
 mongoose.connect(url, { useNewUrlParser: true })
   .then(() => console.log(`Connected to DB...`));
 
