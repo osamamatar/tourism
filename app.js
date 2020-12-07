@@ -16,8 +16,8 @@ const storage = multer.diskStorage({
   }
 })
 //connect to mongo db
-const url = 'mongodb+srv://dbUser:<12345>@cluster0.uekuf.mongodb.net/<dbname>?retryWrites=true&w=majority'
-mongoose.connect(url, { useNewUrlParser: true })
+const url = 'mongodb+srv://dbUser:12345@cluster0.uekuf.mongodb.net/tourism?retryWrites=true&w=majority'
+mongoose.connect(url, { useUnifiedTopology:true,useNewUrlParser: true })
   .then(() => console.log(`Connected to DB...`));
 
 const upload = multer({ storage: storage })
